@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import Sidebar from 'components/Sidebar.jsx';
-import Page from 'components/Page.jsx';
+import Sidebar from 'components/page/Sidebar.jsx';
+import Page from 'components/page/Page.jsx';
 
 const withSidebar = (Component) => (
   withRouter((props) =>

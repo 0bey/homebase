@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import News from './News.jsx';
-import Landing from './Landing.jsx';
+import News from './page/News.jsx';
+import Landing from './page/Landing.jsx';
 
 import 'styles/App.css';
 
