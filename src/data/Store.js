@@ -1,9 +1,10 @@
 const Store = {
   news: {
     cornerstone: {
-      label: 'Launch // 12.18.2017',
-      content: 'This site departed earth.'
-    }
+      label: 'Launch',
+      date: '12.18.17',
+      content: 'This site departed earth, headed for nowhere in particular.'
+    },
   },
   navigation: {
     emblem: {

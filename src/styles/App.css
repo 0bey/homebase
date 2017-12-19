@@ -13,7 +13,6 @@ a {
 
   display: grid;
   grid-template-columns: 100px repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
   grid-gap: 16px;
 }
 
@@ -28,8 +27,40 @@ a {
   padding: 16px 0px;
 }
 
-.news > .item {
+.news > .post {
   grid-column: span 12;
+
+  display: grid;
+  grid-template-columns: 100px repeat(11, 1fr);
+  grid-template-rows: 100px auto;
+  grid-gap: 16px;
+}
+
+.post > .bullet {
+  grid-row: 1;
+  grid-column: 1;
+
+  border: 1px dashed black;
+  text-align: center;
+  line-height: 100px;
+}
+
+.post > .label {
+  grid-row: 1;
+  grid-column: 2 / 12;
+
+  text-align: center;
+  line-height: 100px;
+}
+
+.post > .content {
+  grid-row: 2;
+  grid-column: 2 / 12;
+
+  min-height: 250px;
+
+  border: 1px dashed black;
+  padding: 16px;
 }
 
 .landing {
@@ -47,12 +78,14 @@ a {
   grid-row: span 12;
 
   display: grid;
-  grid-template-rows: 50px repeat(11, 1fr);
+  grid-template-rows: 100px repeat(11, 1fr);
 
   border-right: 1px solid black;
 }
 
 .sidebar > .item {
+  max-height: 200px;
+
   display: flex;
   align-items: center;
   justify-content: center;

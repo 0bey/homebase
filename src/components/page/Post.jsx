@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Post = ({ label, content }) => {
+const Post = ({ label, date, content }) => {
   return (
-    <div className="item">
-      <div className="t-med t-slant">{ label }</div>
-      <div>{ content }</div>
+    <div className="post">
+      <div className="bullet">{ date }</div>
+      <div className="label t-med t-slant">{ label }</div>
+      <div className="content">{ content }</div>
     </div>
   )
 }
