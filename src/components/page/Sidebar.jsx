@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { map } from 'lodash';
 
 import store from 'data/Store.js';
@@ -15,4 +16,4 @@ const Sidebar = (props) => {
   )
 }
 
-export default Sidebar;
+export default withRouter(Sidebar);

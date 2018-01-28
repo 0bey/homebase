@@ -1,17 +1,20 @@
 import React from 'react';
 import { map } from 'lodash';
 
-import store from 'data/Store.js';
-import withSidebar from 'components/hoc/withSidebar.jsx';
+import { keys } from 'constants/Store.js';
 
+import hydrate from 'components/hoc/hydrate.jsx';
+import Page from './Page.jsx';
 import Post from './Post.jsx';
 
-const News = () => {
+const News = ({ data }) => {
   return (
-    <div className="news">
-      { map(store.news, Post) }
-    </div>
+    <Page withSidebar>
+      <div className="news">
+        { map(data, Post) }
+      </div>
+    </Page>
   )
 }
 
-export default withSidebar(News);
+export default hydrate(keys.pages.news)(News);
