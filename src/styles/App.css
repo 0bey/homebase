@@ -22,9 +22,8 @@ a {
 
 .page {
   flex: 1;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 16px;
+  display: flex;
+  flex-direction: column;
   overflow: auto;
   padding: 16px;
   box-sizing: border-box;
@@ -63,21 +62,18 @@ a {
 }
 
 .bullet {
-  grid-column: span 2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .label {
-  grid-column: span 2; 
   display: flex;
   justify-content: center;
   align-items: center; 
 }
 
 .content {
-  grid-column: span 8;  
   padding: 16px;
   box-sizing: border-box;
 }

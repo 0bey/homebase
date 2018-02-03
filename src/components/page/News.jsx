@@ -10,7 +10,7 @@ import Post from './Post.jsx';
 const News = ({ data }) => {
   return (
     <Page withSidebar>
-      { map(data, Post) }
+      { map(data, (data) => <Post {...data} />) }
     </Page>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import OceanEmblem from 'components/common/OceanEmblem.jsx';
+import OceanEmblem from 'components/cells/OceanEmblem.jsx';
 
 const Landing = () => {
   return (
