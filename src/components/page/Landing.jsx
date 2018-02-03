@@ -1,17 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import OceanEmblem from 'components/common/OceanEmblem.jsx';
 
 const Landing = () => {
   return (
-    <Link to="/news" className="landing page">
-      <div className="t-med t-spaced">
-        mac finnie
-      </div>
-      <div className="t-slant t-spaced">
-        @0bey
-      </div>
-    </Link>
+    <div style={styles.container}>
+      <OceanEmblem />
+    </div>
   )
 }
 
 export default Landing;
+
+const styles = {
+  container: {
+    height: '100vh',
+    width: '100vw'
+  }
+}

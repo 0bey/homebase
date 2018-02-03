@@ -4,9 +4,11 @@ import Sidebar from './Sidebar.jsx';
 
 const Page = ({ children, withSidebar }) => {
   return (
-    <div className="page">
+    <div className="flex">
       { withSidebar && <Sidebar /> }
-      { children }
+      <div className="page">
+        { children }
+      </div>
     </div>
   )
 }

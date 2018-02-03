@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SidebarLink = (location) => ({ to, label }) => {
   return (
-    <Link to={to} className={classes.item(location === to)}>
+    <Link key={to} to={to} className={classes.item(location === to)}>
       { label }
     </Link>
   )
