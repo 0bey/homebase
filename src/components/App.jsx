@@ -1,22 +1,15 @@
-import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import React from 'react'
+import { HashRouter, Route, Switch } from 'react-router-dom'
 
-import News from './page/News.jsx';
-import Landing from './page/Landing.jsx';
+import News from './News/News.jsx'
+import Landing from './Landing/Landing.jsx'
 
-import 'styles/App.css';
+const App = () => 
+  <HashRouter>
+    <Switch>
+      <Route path="/" exact component={Landing} />
+      <Route path="/news" component={News} />
+    </Switch>
+  </HashRouter>
 
-class App extends Component {
-  render() {
-    return (
-      <HashRouter>
-        <Switch>
-          <Route path="/" exact component={Landing} />
-          <Route path="/news" component={News} />
-        </Switch>
-      </HashRouter>
-    )
-  }
-}
-
-export default App;
+export default App

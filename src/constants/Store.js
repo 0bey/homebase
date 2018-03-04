@@ -41,3 +41,5 @@ export const keys = {
     news: 'news'
   }
 }
+
+export default Store
