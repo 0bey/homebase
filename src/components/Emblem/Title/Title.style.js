@@ -2,7 +2,8 @@ const Style = {
   root: {
     letterSpacing: '5px',
     color: 'white',
-    fontSize: '24px',
+    fontSize: '5vmin',
+    fontWeight: 'bold',
   }
 }
 
