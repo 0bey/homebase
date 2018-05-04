@@ -8,6 +8,7 @@ const Style = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    boxSizing: 'border-box',
   }
 }
 

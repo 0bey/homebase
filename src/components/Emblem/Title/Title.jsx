@@ -4,7 +4,7 @@ import Style from './Title.style.js'
 
 const Title = () => 
   <div style={Style.root}>
-    mac
+    III
   </div>
 
 export default Title

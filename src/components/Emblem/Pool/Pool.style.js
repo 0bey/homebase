@@ -1,6 +1,8 @@
 const Style = {
   root: {
-    borderRadius: '50%'
+    // borderRadius: '50%'
+    maxHeight: '100%',
+    maxWidth: '100%',
   }
 }
 
