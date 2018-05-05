@@ -1,9 +1,10 @@
 import React from 'react'
 import { Motion, spring } from 'react-motion'
 
-import Layer from './Layer/Layer.jsx'
-import Title from './Title/Title.jsx'
-import SpiralGraphic from './Pool/graphic00003.png'
+import Layer from './Layer.jsx'
+import Title from './Title.jsx'
+import SpiralGraphic from '../assets/graphic00003.png'
+import Graphic from '../assets/graphic00013.png'
 
 const Emblem = () =>
   <div style={styles.wrapper}>
@@ -33,7 +34,7 @@ const styles = {
     width: '100%',
   },
   graphic: {
-    backgroundImage: `url(${SpiralGraphic})`,
+    backgroundImage: `url(${Graphic})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100%',

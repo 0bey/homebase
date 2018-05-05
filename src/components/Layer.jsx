@@ -1,5 +1,14 @@
-const Style = {
-  root: {
+import React from 'react'
+
+const Layer = ({ children }) => 
+  <div style={style.container}>
+    { children }
+  </div>
+
+export default Layer
+
+const style = {
+  container: {
     position: 'absolute',
     top: '0px',
     left: '0px',
@@ -11,5 +20,3 @@ const Style = {
     boxSizing: 'border-box',
   }
 }
-
-export default Style

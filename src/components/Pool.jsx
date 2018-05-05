@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Waves from './Pool.gif'
-import Style from './Pool.style.js'
+import Waves from '../assets/Pool.gif'
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 const Pool = ({ style }) => {
   return (
@@ -14,3 +13,11 @@ const Pool = ({ style }) => {
 }
 
 export default Pool
+
+const Style = {
+  root: {
+    // borderRadius: '50%'
+    maxHeight: '100%',
+    maxWidth: '100%',
+  }
+}
