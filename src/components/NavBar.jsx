@@ -10,6 +10,7 @@ export default NavBar
 const styles = {
   nav: {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, auto))'
+    gridTemplateColumns: 'repeat(auto-fit, minmax(250px, auto))',
+    width: '100vw'
   }
 }
