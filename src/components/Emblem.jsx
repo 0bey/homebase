@@ -9,11 +9,11 @@ const Emblem = () =>
   <div style={styles.wrapper}>
     <Motion 
       defaultStyle={{value: 0}} 
-      style={{value: spring(1, {stiffness: 50, damping: 20})}}
+      style={{value: spring(1, {stiffness: 50, damping: 30})}}
     >
       { ({value}) => 
           <Layer>
-            <div style={styles.graphic} />
+            <div style={styles.graphic(value)} />
           </Layer>
       }
     </Motion>
@@ -32,11 +32,12 @@ const styles = {
     height: '100%',
     width: '100%',
   },
-  graphic: {
+  graphic: opacity => ({
     backgroundImage: `url(${Graphic})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100%',
     width: '100%',
-  }
+    opacity: opacity * 1.0,
+  })
 }
