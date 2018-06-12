@@ -50,7 +50,6 @@ const styles = {
     gridTemplateRows: '100%',
     gridAutoFlow: 'row',
     boxSizing: 'border-box',
-    gridAutoFlow: 'row',
     height: '100%',
   },
   frame: {

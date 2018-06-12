@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Octocat from 'assets/mark-github.svg'
 
 const Code = () => 

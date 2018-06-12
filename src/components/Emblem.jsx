@@ -3,7 +3,6 @@ import { Motion, spring } from 'react-motion'
 
 import Layer from './Layer.jsx'
 import Title from './Title.jsx'
-import SpiralGraphic from '../assets/graphic00003.png'
 import Graphic from '../assets/graphic00013.png'
 
 const Emblem = () =>
