@@ -1,38 +1,30 @@
 import React from 'react'
+import ArtProvider from './ArtProvider.jsx'
 
-const data = [
-  'https://i.imgur.com/pMUGF0C.png',
-  'https://i.imgur.com/bpqBPAr.png',
-  'https://i.imgur.com/XaYbwgo.png',
-  'https://i.imgur.com/3AHnfoz.png',
-  'https://i.imgur.com/lyC9EuA.png',
-  'https://i.imgur.com/cQ4RBoI.jpg',
-  'https://i.imgur.com/J1GrJTY.png',
-  'https://i.imgur.com/XS6SUQ4.png',
-  'https://i.imgur.com/CT0xiQY.png',
-  'https://i.imgur.com/ZI0NAwf.png',
-  'https://i.imgur.com/ZHiOdVP.png',
-  'https://i.imgur.com/F9l2M1Z.png',
-  'https://i.imgur.com/dGotoh5.png',
-  'https://i.imgur.com/22MfBYs.png',
-  'https://i.imgur.com/OBW0ZkS.png',
-  'https://i.imgur.com/4kA2pZB.png',
-  'https://i.imgur.com/DImsRlw.jpg',
-  'https://i.imgur.com/7djx3ih.png',
-  'https://i.imgur.com/5jZJF49.png',
-  'https://i.imgur.com/V1QIzrk.jpg',
-]
+const ArtWaiter = () => 
+  <div style={styles.frame}>
+    loading
+  </div>
+
+const ArtWorks = ({files}) => files.map((src, index) => 
+  <div key={`Artwork-${index}`} style={styles.frame}>
+    <img alt={`artwork #${index}`} src={src} style={styles.artwork} />
+  </div>
+)
 
 const Art = () => 
-  <div style={styles.container}>
-    <div style={styles.gallery}>
-      { data.map((datum, index) => 
-          <div style={styles.frame}>
-              <img alt={`artwork #${index}`} src={datum} style={styles.artwork} />
-          </div>
-      )}
-    </div>
-  </div>
+  <ArtProvider>
+    { files => 
+      <div style={styles.container}>
+        <div style={styles.gallery}>
+          { files.length 
+              ? <ArtWorks files={files} />
+              : <ArtWaiter />
+          }
+        </div>
+      </div>
+    }
+  </ArtProvider>
 
 export default Art
 
