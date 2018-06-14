@@ -7,7 +7,7 @@ const Code = () =>
       <img alt="A link icon to github projects" src={Octocat} style={styles.icon} />
     </a>
     <div style={styles.blurb}>
-      I have organized my ongoing and prior work on github, if you are interested in the full trajectory of my experience see my resume. 
+      I have organized my ongoing and prior work on github. If you are interested in a more formal trajectory of my experience, please see my <a href="https://www.dropbox.com/s/228gsvrpdgvrbv8/GMF_RESUME.pdf?dl=0">resume</a>.
     </div>
   </div>
 
