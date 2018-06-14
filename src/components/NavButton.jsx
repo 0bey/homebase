@@ -1,20 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 
 import Hover from './Hover.jsx'
 
 export default ({to, children}) =>
-  <div style={styles.container}>
-    <Hover>
-      { isHovered => 
-        <Link to={to} style={styles.dest}>
-          <div style={styles.label(isHovered)}>
-            { children }
-          </div>
-        </Link>
-      }
-    </Hover>
-  </div>
+  <Route path={to} exact={true}>
+    { ({ match }) =>
+      <div style={styles.container}>
+        <Hover>
+          { isHovered =>
+            <Link to={to} style={styles.dest}>
+              <div style={styles.label(isHovered, match)}>
+                { children }
+              </div>
+            </Link>
+          }
+        </Hover>
+      </div>
+    }
+  </Route>
+
 
 
 const styles = {
@@ -31,7 +36,7 @@ const styles = {
     boxSizing: 'border-box',
     padding: '20% 25%',
   },
-  label: (isHovered) => ({
+  label: (isHovered, isMatch) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -40,6 +45,9 @@ const styles = {
     border: 'solid 2px transparent',
     transition: 'border 0.5s ease-out',
     ...isHovered && {
+      border: 'solid 2px black'
+    },
+    ...isMatch && {
       border: 'solid 2px black'
     }
   })

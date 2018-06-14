@@ -4,10 +4,12 @@ import {Dropbox} from 'dropbox'
 const FOLDER_OPTS = { path: '/art' };
 
 export default class ArtProvider extends React.Component {
-  
+
   constructor(props) {
     super(props)
+
     this._dropbox = new Dropbox({ accessToken: 'wdELHrxOK2AAAAAAAAAA8z3t1UZW0etjojNAohcBL76o3Zmj1C9XMGZDA1IAXGPP' });
+    
     this.state = {
       files: []
     }
